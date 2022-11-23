@@ -5,7 +5,7 @@ FROM ubuntu
 RUN apt-get update \
     && apt-get install -y \
     curl \
-    python-dev
+    python-dev-is-python3
 
 # 이미지의 작업 폴더 지정(경로)
 WORKDIR /root
@@ -17,4 +17,4 @@ COPY hello.py .
 ENV version 1.0
 
 # 이미지 실행 시 명령어
-CMD ["python", "hello.py", "guest"]
+CMD ["python", "hello.py", "guest"] # 여기서 'quest'는 sys.argv[1]가 된다.
