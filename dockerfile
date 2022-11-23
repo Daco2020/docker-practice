@@ -1,5 +1,5 @@
 # 기반 이미지
-FROM ubunto
+FROM ubuntu
 
 # 사용자가 지정한 명령
 RUN apt-get update \
