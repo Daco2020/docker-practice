@@ -13,8 +13,8 @@ ARG version=1.0
 # 이미지의 작업 폴더 지정(경로)
 WORKDIR /root
 
-# 로컬에 존재하는 파일을 이미지 안으로 복사
-COPY hello.py .
+# 로컬에 존재하는 파일을 이미지 안으로 복사(파일 직접 명시 필요)
+COPY ./hello.py ./hello.txt ./
 
 # 환경변수 주입
 ENV version $version
